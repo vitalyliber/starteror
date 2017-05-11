@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./projects:/usr/src/app/projects
+      - ./ssh:/root/.ssh
+    ports:
+      - "3000:3000"
